@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,8 +26,8 @@ const Index = () => {
   const [videoInfo, setVideoInfo] = useState<VideoInfo | null>(null);
   const { toast } = useToast();
 
-  // Replace with your Render.com backend URL when deployed
-  const BACKEND_URL = "http://localhost:5000"; // Change this to your Render URL
+  // Replace this with your actual Render.com URL after deployment
+  const BACKEND_URL = "https://your-app-name.onrender.com"; // Update this!
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -181,12 +180,16 @@ const Index = () => {
           </Card>
         )}
 
-        <div className="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+        <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-lg">
           <div className="flex items-start gap-2">
-            <AlertCircle className="h-5 w-5 text-yellow-600 mt-0.5" />
-            <div className="text-sm text-yellow-800">
-              <strong>Important:</strong> Make sure your backend is running and update the BACKEND_URL 
-              in the code to your Render.com deployment URL. This tool is for educational purposes only.
+            <AlertCircle className="h-5 w-5 text-blue-600 mt-0.5" />
+            <div className="text-sm text-blue-800">
+              <strong>Next Steps:</strong>
+              <ol className="mt-2 list-decimal list-inside space-y-1">
+                <li>Deploy your backend to Render.com following the guide</li>
+                <li>Replace the BACKEND_URL in this code with your Render URL</li>
+                <li>Test with a YouTube video URL</li>
+              </ol>
             </div>
           </div>
         </div>
