@@ -26,8 +26,7 @@ const Index = () => {
   const [videoInfo, setVideoInfo] = useState<VideoInfo | null>(null);
   const { toast } = useToast();
 
-  // Replace this with your actual Render.com URL after deployment
-  const BACKEND_URL = "https://your-app-name.onrender.com"; // Update this!
+  const BACKEND_URL = "https://youtube-downloader-backend-aqay.onrender.com";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -179,20 +178,6 @@ const Index = () => {
             </CardContent>
           </Card>
         )}
-
-        <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-          <div className="flex items-start gap-2">
-            <AlertCircle className="h-5 w-5 text-blue-600 mt-0.5" />
-            <div className="text-sm text-blue-800">
-              <strong>Next Steps:</strong>
-              <ol className="mt-2 list-decimal list-inside space-y-1">
-                <li>Deploy your backend to Render.com following the guide</li>
-                <li>Replace the BACKEND_URL in this code with your Render URL</li>
-                <li>Test with a YouTube video URL</li>
-              </ol>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
